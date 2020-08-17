@@ -1,2 +1,3 @@
 # Pipeline
-Represents an implementation of Pipeline pattern for .NET Core. 
+Represents an implementation of Pipeline pattern for .NET.
+
