@@ -4,7 +4,7 @@ It allows to break down a large bunch of code into small pieces for better reada
 
 # Usage
 
-First of all you should create a type which will be passed between the pipeline steps.
+First of all you should create a type which will be passed between the pipeline steps:
 
 ```
 pubclic class InsurancePremiumModel
@@ -13,7 +13,7 @@ pubclic class InsurancePremiumModel
 }
 ```
 Use PipelineBuilder to create pipeline and fill one with steps.
-As an example lets assume that we want to calculate common insurance premium for set of customers.
+As an example lets assume that we want to calculate common insurance premium for set of customers:
 
 ```
 var customers = GetCustomers();
@@ -42,7 +42,7 @@ var builder = PipelineBuilder<InsurancePremiumModel>
 ```
 
 It is possible to describe a pipeline step as a type by implementing an interface IPipelineStep<T>.
-In an example below we create RoundOffStep to round off total insurance premium we got.
+In an example below we create RoundOffStep to round off total insurance premium we got:
 
 ```
 public class RoundOffStep
@@ -67,16 +67,70 @@ public class RoundOffStep
 
     }
 ```
-So, you can add newly created step to builder like this
+So, you can add newly created step to builder like this:
 
 ```
   builder.AddStep<RoundOffStep>();
 ```
 
 To obtain pipeline object use method Build of PipelineBuilder.
-After that you can call method ExecuteAsync of pipeline to perform all added steps. 
+After that you can call method ExecuteAsync of pipeline to perform all added steps:
 
 ```
   var pipeline = builder.Build();
   var result = await pipeline.ExecuteAsync(new InsurancePremiumModel());
 ```
+
+# Usage with .NET Core
+
+You can register all classes which implement IPipelineStep interface within ConfigureServices method of Startup class:
+
+```
+  services.RegisterSteps();
+```
+
+After that it is possible to inject objects of steps into controllers, services and build pipeline with them:
+
+```
+  public class PipelineController
+        : Controller
+    {
+        private readonly Step1 _step1;
+        private readonly Step2 _step2;
+
+
+        public PipelineController(
+            Step1 step1,
+            Step2 step2)
+        {
+            _step1 = step1;
+            _step2 = step2;
+        }
+        
+        
+        [HttpGet]
+        public async Task<ActionResult> ExecutePipelineFromRegisteredSteps()
+        {
+            var pipeline = PipelineBuilder<string>
+                .StartWith(_step1)
+                .AddStep(_step2)
+                .AddStep(async (data, next) =>
+                {
+                    data += "Final Step!!!";
+                    return await next.Invoke(data);
+                })
+                .Build();
+            
+            var result = pipeline.ExecuteAsync("hello, darkness, my old friend \r\n");
+                
+            return Json(result);
+        }
+    }
+
+```
+
+
+
+
+
+
