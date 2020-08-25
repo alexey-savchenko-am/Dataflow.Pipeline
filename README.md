@@ -92,7 +92,39 @@ You can register all classes which implement IPipelineStep interface within Conf
 After that it is possible to inject objects of steps into controllers, services and build pipeline with them:
 
 ```
-  public class PipelineController
+    public class Step1
+        : IPipelineStep<string>
+    {
+        private readonly ISomeService _someService;
+
+        public Step1(ISomeService someService)
+        {
+            _someService = someService;
+        }
+        public async Task<string> InvokeAsync(string input, Func<string, Task<string>> next)
+        {
+            input += "STEP1 :" + _someService.GetSomeString(100);
+            return await next(input);
+        }
+    }
+    
+    public class Step2
+        : IPipelineStep<string>
+    {
+        private readonly ISomeService _someService;
+
+        public Step2(ISomeService someService)
+        {
+            _someService = someService;
+        }
+        public async Task<string> InvokeAsync(string input, Func<string, Task<string>> next)
+        {
+            input += "STEP2 :" + _someService.GetSomeString(100);
+            return await next(input);
+        }
+    }
+
+   public class PipelineController
         : Controller
     {
         private readonly Step1 _step1;
@@ -129,8 +161,28 @@ After that it is possible to inject objects of steps into controllers, services 
 
 ```
 
+There is also an extension method RegisterPipeline<T> which lets you simply create and register as singletone an object of Pipeline:
+
+```
+  services.RegisterPipeline<string>(
+                builder =>
+                    builder
+                        .RegisterStep<Step1>()
+                        .RegisterStep<Step2>()
+            );
+```
+
+After that you can inject object of pipeline into service:
 
 
-
+```
+  private readonly IPipeline<string, string> _pipeline;
+  
+  public PipelineController(
+            IPipeline<string, string> pipeline)
+            {
+              _pipeline = pipeline;
+            }
+```
 
 
