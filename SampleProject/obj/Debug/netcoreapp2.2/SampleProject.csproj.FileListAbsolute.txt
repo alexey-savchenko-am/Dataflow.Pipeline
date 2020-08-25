@@ -1,0 +1,14 @@
+C:\projects\PipelineNew\SampleProject\bin\Debug\netcoreapp2.2\SampleProject.deps.json
+C:\projects\PipelineNew\SampleProject\bin\Debug\netcoreapp2.2\SampleProject.runtimeconfig.json
+C:\projects\PipelineNew\SampleProject\bin\Debug\netcoreapp2.2\SampleProject.runtimeconfig.dev.json
+C:\projects\PipelineNew\SampleProject\bin\Debug\netcoreapp2.2\SampleProject.dll
+C:\projects\PipelineNew\SampleProject\bin\Debug\netcoreapp2.2\SampleProject.pdb
+C:\projects\PipelineNew\SampleProject\bin\Debug\netcoreapp2.2\IO.Pipeline.dll
+C:\projects\PipelineNew\SampleProject\bin\Debug\netcoreapp2.2\IO.Pipeline.pdb
+C:\projects\PipelineNew\SampleProject\obj\Debug\netcoreapp2.2\SampleProject.csprojAssemblyReference.cache
+C:\projects\PipelineNew\SampleProject\obj\Debug\netcoreapp2.2\SampleProject.csproj.CoreCompileInputs.cache
+C:\projects\PipelineNew\SampleProject\obj\Debug\netcoreapp2.2\SampleProject.AssemblyInfoInputs.cache
+C:\projects\PipelineNew\SampleProject\obj\Debug\netcoreapp2.2\SampleProject.AssemblyInfo.cs
+C:\projects\PipelineNew\SampleProject\obj\Debug\netcoreapp2.2\SampleProject.csproj.CopyComplete
+C:\projects\PipelineNew\SampleProject\obj\Debug\netcoreapp2.2\SampleProject.dll
+C:\projects\PipelineNew\SampleProject\obj\Debug\netcoreapp2.2\SampleProject.pdb
