@@ -83,12 +83,12 @@ After that you can call method ExecuteAsync of pipeline to perform all added ste
 
 # Usage with .NET Core
 
-You can register all classes which implement IPipelineStep interface within ConfigureServices method of Startup class:
+You can register all classes which implement IPipelineStep interface within ConfigureServices method of Startup class.
 
 ```
   services.RegisterSteps();
 ```
-
+The step classes can contain parametric constructor.
 After that it is possible to inject objects of steps into controllers, services and build pipeline with them:
 
 ```
@@ -158,6 +158,12 @@ After that it is possible to inject objects of steps into controllers, services 
             return Json(result);
         }
     }
+
+```
+You should register SomeService within ConfigureServices method of Startup class something like this:
+
+```
+  services.AddSingleton<ISomeService, SomeService>();
 
 ```
 
