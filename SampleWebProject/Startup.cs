@@ -29,12 +29,8 @@ namespace SampleWebProject
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Pipeline}/{action=Index}/{id?}");
-            });
+            app.UseRouting();
+            app.UseEndpoints(routes => { routes.MapDefaultControllerRoute(); });
         }
     }
 }

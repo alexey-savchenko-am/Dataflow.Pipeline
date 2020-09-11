@@ -10,14 +10,14 @@
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
-      "netcoreapp2.2"
+      "netcoreapp3.1"
     ],
     "sources": {
       "http://localhost:5000/v3/index.json": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
-      "netcoreapp2.2": {
+      "netcoreapp3.1": {
         "projectReferences": {
           "C:\\projects\\PipelineNew\\IO.Pipeline\\IO.Pipeline.csproj": {
             "projectPath": "C:\\projects\\PipelineNew\\IO.Pipeline\\IO.Pipeline.csproj"
@@ -32,28 +32,21 @@
     }
   },
   "frameworks": {
-    "netcoreapp2.2": {
+    "netcoreapp3.1": {
       "dependencies": {
-        "Microsoft.AspNetCore.App": {
-          "suppressParent": "All",
-          "target": "Package",
-          "version": "[2.2.0, )",
-          "autoReferenced": true
-        },
         "Microsoft.AspNetCore.Razor.Design": {
           "suppressParent": "All",
           "target": "Package",
           "version": "[2.2.0, )"
-        },
-        "Microsoft.NETCore.App": {
-          "suppressParent": "All",
-          "target": "Package",
-          "version": "[2.2.0, )",
-          "autoReferenced": true
         }
       },
       "imports": [
-        "net461"
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
       ],
       "assetTargetFallback": true,
       "warn": true

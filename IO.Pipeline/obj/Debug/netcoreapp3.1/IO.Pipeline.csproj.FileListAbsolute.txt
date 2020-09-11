@@ -1,0 +1,10 @@
+C:\projects\PipelineNew\IO.Pipeline\bin\Debug\netcoreapp3.1\IO.Pipeline.deps.json
+C:\projects\PipelineNew\IO.Pipeline\bin\Debug\netcoreapp3.1\IO.Pipeline.dll
+C:\projects\PipelineNew\IO.Pipeline\bin\Debug\netcoreapp3.1\IO.Pipeline.pdb
+C:\projects\PipelineNew\IO.Pipeline\obj\Debug\netcoreapp3.1\IO.Pipeline.csprojAssemblyReference.cache
+C:\projects\PipelineNew\IO.Pipeline\obj\Debug\netcoreapp3.1\IO.Pipeline.AssemblyInfoInputs.cache
+C:\projects\PipelineNew\IO.Pipeline\obj\Debug\netcoreapp3.1\IO.Pipeline.AssemblyInfo.cs
+C:\projects\PipelineNew\IO.Pipeline\obj\Debug\netcoreapp3.1\IO.Pipeline.csproj.CoreCompileInputs.cache
+C:\projects\PipelineNew\IO.Pipeline\obj\Debug\netcoreapp3.1\IO.Pipeline.RazorTargetAssemblyInfo.cache
+C:\projects\PipelineNew\IO.Pipeline\obj\Debug\netcoreapp3.1\IO.Pipeline.dll
+C:\projects\PipelineNew\IO.Pipeline\obj\Debug\netcoreapp3.1\IO.Pipeline.pdb

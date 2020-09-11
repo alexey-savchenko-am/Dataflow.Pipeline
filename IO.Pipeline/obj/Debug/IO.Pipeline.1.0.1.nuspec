@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>IO.Pipeline</id>
+    <version>1.0.1</version>
+    <title>IO.Pipeline</title>
+    <authors>goOrn</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/goOrn/Pipeline/blob/master/LICENSE</licenseUrl>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\projects\PipelineNew\IO.Pipeline\bin\Debug\netcoreapp3.1\IO.Pipeline.dll" target="lib\netcoreapp3.1\IO.Pipeline.dll" />
+  </files>
+</package>

@@ -21,7 +21,7 @@
         <e p="IPipeline.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="IO.Pipeline.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -37,7 +37,7 @@
         <e p="FinalStep.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="SampleProject.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -52,7 +52,7 @@
         <e p="ISomeService.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="SampleWebProject.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
