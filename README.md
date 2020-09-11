@@ -1,3 +1,5 @@
+[![NuGet version (IO.Pipeline)](https://img.shields.io/nuget/v/IO.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/IO.Pipeline/)
+
 # Pipeline
 Represents an implementation of Pipeline pattern for .NET.
 It allows to break down a large bunch of code into small pieces for better readability, extensibility and testability.
