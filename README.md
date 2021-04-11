@@ -1,4 +1,5 @@
 [![NuGet version (IO.Pipeline)](https://img.shields.io/nuget/v/IO.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/IO.Pipeline/)
+[![Downloads](https://img.shields.io/github/downloads/atom/atom/total.svg)]()
 
 # Pipeline
 Represents an implementation of Pipeline pattern for .NET.
