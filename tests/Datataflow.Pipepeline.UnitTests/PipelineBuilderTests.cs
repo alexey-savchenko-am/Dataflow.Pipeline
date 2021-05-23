@@ -1,11 +1,11 @@
 ﻿namespace Datataflow.Pipepeline.UnitTests
 {
-    using IO.Pipeline.Builder;
     using System.Threading.Tasks;
     using AutoFixture;
-    using IO.Pipeline;
     using Xunit;
     using System;
+    using Dataflow.Pipeline.Builder;
+    using Dataflow.Pipeline;
 
     public class PipelineBuilderTests
     {

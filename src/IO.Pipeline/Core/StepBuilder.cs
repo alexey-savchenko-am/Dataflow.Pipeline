@@ -1,6 +1,6 @@
-﻿namespace IO.Pipeline.Core
+﻿namespace Dataflow.Pipeline.Core
 {
-    using IO.Pipeline.Builder;
+    using Dataflow.Pipeline.Builder;
 
     public class StepBuilder<T>
     {

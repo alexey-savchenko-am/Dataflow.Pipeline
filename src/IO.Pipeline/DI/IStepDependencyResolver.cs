@@ -1,4 +1,4 @@
-﻿namespace IO.Pipeline.DI
+﻿namespace Dataflow.Pipeline.DI
 {
     using System;
 

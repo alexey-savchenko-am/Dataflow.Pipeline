@@ -1,5 +1,5 @@
 ﻿using System;
-namespace IO.Pipeline.DI
+namespace Dataflow.Pipeline.DI
 {
     using Microsoft.Extensions.DependencyInjection;
 

@@ -1,4 +1,4 @@
-﻿namespace IO.Pipeline
+﻿namespace Dataflow.Pipeline
 {
     using System.Threading.Tasks;
 
