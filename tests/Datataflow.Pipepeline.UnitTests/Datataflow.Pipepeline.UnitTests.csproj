@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<ItemGroup>
 		<PackageReference Include="AutoFixture" Version="4.17.0" />
@@ -17,7 +17,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\src\IO.Pipeline\Dataflow.Pipeline.csproj" />
+	  <ProjectReference Include="..\..\src\Dataflow.Pipeline\Dataflow.Pipeline.csproj" />
 	</ItemGroup>
 	
     <PropertyGroup>
