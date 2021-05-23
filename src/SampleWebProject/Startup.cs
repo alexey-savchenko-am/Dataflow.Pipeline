@@ -1,6 +1,5 @@
-﻿using IO.Pipeline.Core;
+﻿using Dataflow.Pipeline.Core;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace SampleWebProject

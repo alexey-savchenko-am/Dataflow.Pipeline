@@ -2,7 +2,7 @@
 {
     using System;
     using System.Threading.Tasks;
-    using IO.Pipeline;
+    using Dataflow.Pipeline;
 
     public class FinalStep
         : IPipelineStep<string>

@@ -1,9 +1,10 @@
-﻿namespace IO.Pipeline.Builder
+﻿namespace Dataflow.Pipeline.Builder
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using IO.Pipeline.DI;
+    using Dataflow.Pipeline.DI;
+    using DataflowIO.Pipeline;
 
     public abstract class BaseBuilder<TIn, TOut, TBuilder>
         where TBuilder: BaseBuilder<TIn, TOut, TBuilder>, new()

@@ -1,9 +1,9 @@
-﻿namespace IO.Pipeline.Core
+﻿namespace Dataflow.Pipeline.Core
 {
     using System;
     using System.Linq;
     using System.Reflection;
-    using IO.Pipeline.DI;
+    using Dataflow.Pipeline.DI;
     using Microsoft.Extensions.DependencyInjection;
 
     public static class PipepelineServiceCollectionExtensions
