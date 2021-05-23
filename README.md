@@ -3,11 +3,11 @@
 
 
 # Pipeline
-Represents an implementation of Pipeline pattern for .NET.
+Represents an implementation of Pipeline pattern for .NET.\
 It allows to break down a large bunch of code into small pieces for better readability, extensibility and testability.
 
-Old version for core31 https://www.nuget.org/packages/IO.Pipeline/
-Latest version of package could be found here https://www.nuget.org/packages/Dataflow.Pipeline/
+Old version for core31 https://www.nuget.org/packages/IO.Pipeline/ \
+Latest version of package for net5 could be found here https://www.nuget.org/packages/Dataflow.Pipeline/
 # Usage
 
 First of all you should create a type which will be passed between the pipeline steps:
