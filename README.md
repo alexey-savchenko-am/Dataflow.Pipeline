@@ -5,6 +5,8 @@
 # Pipeline
 Represents an implementation of Pipeline pattern for .NET.
 It allows to break down a large bunch of code into small pieces for better readability, extensibility and testability.
+
+Old version for core31 https://www.nuget.org/packages/IO.Pipeline/
 Latest version of package could be found here https://www.nuget.org/packages/Dataflow.Pipeline/
 # Usage
 
