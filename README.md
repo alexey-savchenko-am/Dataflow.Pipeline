@@ -1,10 +1,11 @@
 [![NuGet version (Dataflow.Pipeline)](https://img.shields.io/nuget/v/Dataflow.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/Dataflow.Pipeline/)
 [![Downloads](https://img.shields.io/nuget/dt/IO.Pipeline)]()
 
+
 # Pipeline
 Represents an implementation of Pipeline pattern for .NET.
 It allows to break down a large bunch of code into small pieces for better readability, extensibility and testability.
-
+Latest version of package could be found here https://www.nuget.org/packages/Dataflow.Pipeline/
 # Usage
 
 First of all you should create a type which will be passed between the pipeline steps:
