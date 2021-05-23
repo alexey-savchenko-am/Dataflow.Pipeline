@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\IO.Pipeline\Dataflow.Pipeline.csproj" />
+      <ProjectReference Include="..\Dataflow.Pipeline\Dataflow.Pipeline.csproj" />
     </ItemGroup>
 
 </Project>
