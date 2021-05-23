@@ -1,4 +1,5 @@
-[![NuGet version (IO.Pipeline)](https://img.shields.io/nuget/v/IO.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/IO.Pipeline/)
+Elder version [![NuGet version (IO.Pipeline)](https://img.shields.io/nuget/v/IO.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/IO.Pipeline/)
+Latest version [![NuGet version (Dataflow.Pipeline)](https://img.shields.io/nuget/v/IO.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/Dataflow.Pipeline/)
 [![Downloads](https://img.shields.io/nuget/dt/IO.Pipeline)]()
 
 # Pipeline
