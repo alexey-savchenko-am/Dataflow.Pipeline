@@ -159,7 +159,7 @@ After that it is possible to inject objects of steps into controllers, services 
                 })
                 .Build();
             
-            var result = pipeline.ExecuteAsync("hello, darkness, my old friend \r\n");
+            var result = await pipeline.ExecuteAsync("hello, darkness, my old friend \r\n");
                 
             return Json(result);
         }
@@ -169,14 +169,15 @@ After that it is possible to inject objects of steps into controllers, services 
 You should register SomeService within ConfigureServices method of Startup class something like this:
 
 ```
-services.AddSingleton<ISomeService, SomeService>();
-
+services.AddScoped<ISomeService, SomeService>();
+  
 ```
 
 There is also an extension method RegisterPipeline<T> which lets you simply create and register as singletone an object of Pipeline:
 
 ```
 services.RegisterPipeline<string>(
+  stepAutoregistration: true,
   stepBuilder =>
     stepBuilder
       .RegisterStep<Step1>()
