@@ -169,32 +169,31 @@ After that it is possible to inject objects of steps into controllers, services 
 You should register SomeService within ConfigureServices method of Startup class something like this:
 
 ```
-  services.AddSingleton<ISomeService, SomeService>();
+services.AddSingleton<ISomeService, SomeService>();
 
 ```
 
 There is also an extension method RegisterPipeline<T> which lets you simply create and register as singletone an object of Pipeline:
 
 ```
-  services.RegisterPipeline<string>(
-                builder =>
-                    builder
-                        .RegisterStep<Step1>()
-                        .RegisterStep<Step2>()
-            );
+services.RegisterPipeline<string>(
+  stepBuilder =>
+    stepBuilder
+      .RegisterStep<Step1>()
+      .RegisterStep<Step2>()
+);
 ```
 
 After that you can inject object of pipeline into service:
 
 
 ```
-  private readonly IPipeline<string, string> _pipeline;
+private readonly IPipeline<string, string> _pipeline;
   
-  public PipelineController(
-            IPipeline<string, string> pipeline)
-            {
-              _pipeline = pipeline;
-            }
+public PipelineController(IPipeline<string, string> pipeline)
+{
+     _pipeline = pipeline;
+}
 ```
 
 
