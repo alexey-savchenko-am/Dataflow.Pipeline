@@ -13,7 +13,7 @@ Latest version of package for net5 could be found here https://www.nuget.org/pac
 First of all you should create a type which will be passed between the pipeline steps:
 
 ```csharp
-pubclic class InsurancePremiumModel
+public class InsurancePremiumModel
 {
   public decimal TotalPremium { get; set; }
 }
