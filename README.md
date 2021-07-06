@@ -12,7 +12,7 @@ Latest version of package for net5 could be found here https://www.nuget.org/pac
 
 First of all you should create a type which will be passed between the pipeline steps:
 
-```
+```csharp
 pubclic class InsurancePremiumModel
 {
   public decimal TotalPremium { get; set; }
@@ -21,7 +21,7 @@ pubclic class InsurancePremiumModel
 Use PipelineBuilder to create pipeline and fill one with steps.
 As an example lets assume that we want to calculate common insurance premium for set of customers:
 
-```
+```csharp
 var customers = GetCustomers();
 var customersCount = customers.Count();
 
@@ -50,7 +50,7 @@ var builder = PipelineBuilder<InsurancePremiumModel>
 It is possible to describe a pipeline step as a type by implementing an interface IPipelineStep<T>.
 In an example below we create RoundOffStep to round off total insurance premium we got:
 
-```
+```csharp
 public class RoundOffStep
   : IPipelineStep<PriceModel>
   {
@@ -75,14 +75,14 @@ public class RoundOffStep
 ```
 So, you can add newly created step to builder like this:
 
-```
+```csharp
   builder.AddStep<RoundOffStep>();
 ```
 
 To obtain pipeline object use method Build of PipelineBuilder.
 After that you can call method ExecuteAsync of pipeline to perform all added steps:
 
-```
+```csharp
   var pipeline = builder.Build();
   var result = await pipeline.ExecuteAsync(new InsurancePremiumModel());
 ```
@@ -91,13 +91,13 @@ After that you can call method ExecuteAsync of pipeline to perform all added ste
 
 You can register all classes which implement IPipelineStep interface within ConfigureServices method of Startup class.
 
-```
+```csharp
   services.RegisterSteps();
 ```
 The step classes can contain parametric constructor.
 After that it is possible to inject objects of steps into controllers, services and build pipeline with them:
 
-```
+```csharp
     public class Step1
         : IPipelineStep<string>
     {
@@ -168,14 +168,14 @@ After that it is possible to inject objects of steps into controllers, services 
 ```
 You should register SomeService within ConfigureServices method of Startup class something like this:
 
-```
+```csharp
 services.AddScoped<ISomeService, SomeService>();
   
 ```
 
 There is also an extension method RegisterPipeline<T> which lets you simply create and register as singletone an object of Pipeline:
 
-```
+```csharp
 services.RegisterPipeline<string>(
   stepAutoregistration: true,
   stepBuilder =>
@@ -188,7 +188,7 @@ services.RegisterPipeline<string>(
 After that you can inject object of pipeline into service:
 
 
-```
+```csharp
 private readonly IPipeline<string, string> _pipeline;
   
 public PipelineController(IPipeline<string, string> pipeline)
