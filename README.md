@@ -1,10 +1,9 @@
-[![NuGet version (Dataflow.Pipeline)](https://img.shields.io/nuget/v/Dataflow.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/Dataflow.Pipeline/)
-[![Downloads](https://img.shields.io/nuget/dt/IO.Pipeline)]()
-
-
-# Pipeline
+# Dataflow.Pipeline
 Represents an implementation of Pipeline pattern for .NET.\
 It allows to break down a large bunch of code into small pieces for better readability, extensibility and testability.
+
+[![NuGet version (Dataflow.Pipeline)](https://img.shields.io/nuget/v/Dataflow.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/Dataflow.Pipeline/)
+[![Downloads](https://img.shields.io/nuget/dt/IO.Pipeline?style=flat-square&color=blue)]()
 
 Old version for core31 https://www.nuget.org/packages/IO.Pipeline/ \
 Latest version of package for net5 could be found here https://www.nuget.org/packages/Dataflow.Pipeline/
