@@ -5,8 +5,6 @@ It allows to break down a large bunch of code into small pieces for better reada
 [![NuGet version (Dataflow.Pipeline)](https://img.shields.io/nuget/v/Dataflow.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/Dataflow.Pipeline/)
 [![Downloads](https://img.shields.io/nuget/dt/IO.Pipeline?style=flat-square&color=blue)]()
 
-Old version for core31 https://www.nuget.org/packages/IO.Pipeline/ \
-Latest version of package for net5 could be found here https://www.nuget.org/packages/Dataflow.Pipeline/
 # Usage
 
 First of all you should create a type which will be passed between the pipeline steps:
@@ -33,8 +31,8 @@ var builder = PipelineBuilder<InsurancePremiumModel>
   })
   .AddStep((model, next) => {
     var basePrice = GetBasePrice(Options.Dental, customers);
-    var ambulancePremium = _dentalService.Calculate(basePrice);
-    model.TotalPremium += customersCount * ambulancePremium;
+    var dentalPremium = _dentalService.Calculate(basePrice);
+    model.TotalPremium += customersCount * dentalPremium;
     return next.Invoke(model);
   })
   .AddStep((model, next) => {
