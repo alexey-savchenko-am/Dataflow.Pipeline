@@ -1,5 +1,6 @@
 # Dataflow.Pipeline
-A simple pipeline representation for .NET. Represents a sequence of steps which process consistently.
+A simple pipeline representation for .NET.\
+Represents a sequence of steps which process consistently.\
 It allows to break down a large bunch of code into small pieces for better readability, extensibility and testability.
 
 [![NuGet version (Dataflow.Pipeline)](https://img.shields.io/nuget/v/Dataflow.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/Dataflow.Pipeline/)
