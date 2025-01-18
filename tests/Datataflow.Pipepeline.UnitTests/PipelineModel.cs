@@ -1,8 +1,7 @@
-﻿namespace Datataflow.Pipepeline.UnitTests
+﻿namespace Datataflow.Pipepeline.UnitTests;
+
+internal class PipelineModel
 {
-    class PipelineModel
-    {
-        public int Counter { get; set; }
-        public string AnyString { get; set; }
-    }
+    public int Counter { get; set; }
+    public string AnyString { get; set; }
 }

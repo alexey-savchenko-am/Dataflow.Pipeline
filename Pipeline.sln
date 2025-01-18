@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31112.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A2161253-0FD6-4E0E-887E-AFA336D92D5A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleWebProject", "src\SampleWebProject\SampleWebProject.csproj", "{C515AD68-FCCB-41F5-A8B4-F3F170131A59}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleProject", "src\SampleProject\SampleProject.csproj", "{C1DC4263-5675-4BE8-B447-08D5348E0090}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{100D05E9-DBCA-49D3-A9A2-E841D1B43896}"
 EndProject
@@ -21,14 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C515AD68-FCCB-41F5-A8B4-F3F170131A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C515AD68-FCCB-41F5-A8B4-F3F170131A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C515AD68-FCCB-41F5-A8B4-F3F170131A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C515AD68-FCCB-41F5-A8B4-F3F170131A59}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1DC4263-5675-4BE8-B447-08D5348E0090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1DC4263-5675-4BE8-B447-08D5348E0090}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1DC4263-5675-4BE8-B447-08D5348E0090}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1DC4263-5675-4BE8-B447-08D5348E0090}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B006EA16-0ECE-4E86-8869-591BE8BF7F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B006EA16-0ECE-4E86-8869-591BE8BF7F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B006EA16-0ECE-4E86-8869-591BE8BF7F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,8 +30,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C515AD68-FCCB-41F5-A8B4-F3F170131A59} = {A2161253-0FD6-4E0E-887E-AFA336D92D5A}
-		{C1DC4263-5675-4BE8-B447-08D5348E0090} = {A2161253-0FD6-4E0E-887E-AFA336D92D5A}
 		{B006EA16-0ECE-4E86-8869-591BE8BF7F53} = {100D05E9-DBCA-49D3-A9A2-E841D1B43896}
 		{C3F13B1E-A519-443F-8742-2E22A5A99500} = {A2161253-0FD6-4E0E-887E-AFA336D92D5A}
 	EndGlobalSection

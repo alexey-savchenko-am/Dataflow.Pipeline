@@ -1,15 +1,14 @@
-﻿namespace Dataflow.Pipeline
-{
-    using System;
-    using System.Threading.Tasks;
+﻿namespace Dataflow.Pipeline;
 
-    public interface IPipelineStep<TIn, TOut>
-    {
-        Task<TOut> InvokeAsync(TIn input, Func<TIn, Task<TOut>> next);
-    }
-    
-    public interface IPipelineStep<T> 
-        : IPipelineStep<T, T>
-    {
-    }
+using System;
+using System.Threading.Tasks;
+
+public interface IPipelineStep<TIn, TOut>
+{
+    Task<TOut> InvokeAsync(TIn input, Func<TIn, Task<TOut>> next);
+}
+
+public interface IPipelineStep<T> 
+    : IPipelineStep<T, T>
+{
 }

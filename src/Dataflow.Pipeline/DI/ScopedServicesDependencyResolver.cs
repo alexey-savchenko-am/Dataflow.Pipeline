@@ -1,28 +1,27 @@
-﻿using System;
-namespace Dataflow.Pipeline.DI
+﻿namespace Dataflow.Pipeline.DI;
+
+using System;
+using Microsoft.Extensions.DependencyInjection;
+
+public class ScopedServicesDependencyResolver
+    : IStepDependencyResolver
 {
-    using Microsoft.Extensions.DependencyInjection;
+    private readonly IServiceScopeFactory _serviceScopeFactory;
 
-    public class ScopedServicesDependencyResolver
-        : IStepDependencyResolver
+    public ScopedServicesDependencyResolver(IServiceScopeFactory serviceScopeFactory)
     {
-        private readonly IServiceScopeFactory _serviceScopeFactory;
+        _serviceScopeFactory = serviceScopeFactory;
+    }
+    
+    public TStep Resolve<TStep>()
+    {
+        using IServiceScope scope = _serviceScopeFactory.CreateScope();
+        return scope.ServiceProvider.GetRequiredService<TStep>();
+    }
 
-        public ScopedServicesDependencyResolver(IServiceScopeFactory serviceScopeFactory)
-        {
-            _serviceScopeFactory = serviceScopeFactory;
-        }
-        
-        public TStep Resolve<TStep>()
-        {
-            using IServiceScope scope = _serviceScopeFactory.CreateScope();
-            return scope.ServiceProvider.GetRequiredService<TStep>();
-        }
-
-        public object Resolve(Type type)
-        {
-            using IServiceScope scope = _serviceScopeFactory.CreateScope();
-            return scope.ServiceProvider.GetRequiredService(type);
-        }
+    public object Resolve(Type type)
+    {
+        using IServiceScope scope = _serviceScopeFactory.CreateScope();
+        return scope.ServiceProvider.GetRequiredService(type);
     }
 }

@@ -1,11 +1,10 @@
-﻿namespace Dataflow.Pipeline.DI
-{
-    using System;
+﻿namespace Dataflow.Pipeline.DI;
 
-    public interface IStepDependencyResolver
-    {
-        TStep Resolve<TStep>();
-        
-        object Resolve(Type type);
-    }
+using System;
+
+public interface IStepDependencyResolver
+{
+    TStep Resolve<TStep>();
+    
+    object Resolve(Type type);
 }

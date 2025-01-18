@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <OutputType>Library</OutputType>
     <IsPackable>true</IsPackable>
@@ -20,14 +20,6 @@ It allows to break down a large bunch of code into small pieces for better reada
     <Company>Alexey Savchenko</Company>
     <Copyright>Alexey Savchenko</Copyright>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Properties\launchSettings.json" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\LICENSE">
