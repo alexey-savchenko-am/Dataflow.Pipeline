@@ -1,14 +1,14 @@
 # Dataflow.Pipeline
-A simple pipeline representation for .NET.\
-Represents a sequence of steps which process consistently.\
-It allows to break down a large bunch of code into small pieces for better readability, extensibility and testability.
+A simple pipeline representation for .NET.
+It represents a sequence of steps that are processed consistently.
+This approach enables breaking down large blocks of code into smaller, more manageable pieces for improved readability, extensibility, and testability.
 
 [![NuGet version (Dataflow.Pipeline)](https://img.shields.io/nuget/v/Dataflow.Pipeline.svg?style=flat-square&color=blue)](https://www.nuget.org/packages/Dataflow.Pipeline/)
 [![Downloads](https://img.shields.io/nuget/dt/IO.Pipeline?style=flat-square&color=blue)]()
 
 # Usage
 
-First of all you should create a type which will be passed between the pipeline steps:
+First, define a type that will be passed between the pipeline steps:
 
 ```csharp
 public class InsurancePremiumModel
@@ -16,8 +16,8 @@ public class InsurancePremiumModel
   public decimal TotalPremium { get; set; }
 }
 ```
-Use PipelineBuilder to create pipeline and fill one with steps.
-As an example lets assume that we want to calculate common insurance premium for set of customers:
+Use the PipelineBuilder to create a pipeline and populate it with steps.
+For example, let's assume we want to calculate the total insurance premium for a set of customers:
 
 ```csharp
 var customers = GetCustomers();
@@ -45,8 +45,8 @@ var builder = PipelineBuilder<InsurancePremiumModel>
 
 ```
 
-It is possible to describe a pipeline step as a type by implementing an interface IPipelineStep<T>.
-In an example below we create RoundOffStep to round off total insurance premium we got:
+You can also define a pipeline step as a type by implementing the IPipelineStep<T> interface.
+In the example below, we create a RoundOffStep to round off the total insurance premium:
 
 ```csharp
 public class RoundOffStep
@@ -71,14 +71,14 @@ public class RoundOffStep
 
     }
 ```
-So, you can add newly created step to builder like this:
+You can add the newly created step to the builder like this:
 
 ```csharp
   builder.AddStep<RoundOffStep>();
 ```
 
-To obtain pipeline object use method Build of PipelineBuilder.
-After that you can call method ExecuteAsync of pipeline to perform all added steps:
+To obtain the pipeline object, use the Build method of PipelineBuilder.
+Once built, you can execute all added steps by calling the ExecuteAsync method:
 
 ```csharp
   var pipeline = builder.Build();
